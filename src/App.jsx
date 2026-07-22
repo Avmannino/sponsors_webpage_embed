@@ -2,8 +2,26 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import "./App.css";
 import { sponsors } from "./sponsors";
 
-const CARDS_PER_PAGE = 16;
+const CARDS_PER_PAGE_DESKTOP = 16;
+const CARDS_PER_PAGE_MOBILE = 4;
+const MOBILE_BREAKPOINT_PX = 700;
 const SLIDE_INTERVAL_MS = 7000;
+
+function useIsMobile(breakpointPx) {
+  const query = `(max-width: ${breakpointPx}px)`;
+  const [isMobile, setIsMobile] = useState(
+    () => typeof window !== "undefined" && window.matchMedia(query).matches
+  );
+
+  useEffect(() => {
+    const mql = window.matchMedia(query);
+    const handler = (e) => setIsMobile(e.matches);
+    mql.addEventListener("change", handler);
+    return () => mql.removeEventListener("change", handler);
+  }, [query]);
+
+  return isMobile;
+}
 
 function SponsorCard({ sponsor, index, onHoverChange }) {
   return (
@@ -38,16 +56,23 @@ function SponsorCard({ sponsor, index, onHoverChange }) {
 }
 
 export default function App() {
+  const isMobile = useIsMobile(MOBILE_BREAKPOINT_PX);
+  const cardsPerPage = isMobile ? CARDS_PER_PAGE_MOBILE : CARDS_PER_PAGE_DESKTOP;
+
   const pages = useMemo(() => {
     const groups = [];
-    for (let i = 0; i < sponsors.length; i += CARDS_PER_PAGE) {
-      groups.push(sponsors.slice(i, i + CARDS_PER_PAGE));
+    for (let i = 0; i < sponsors.length; i += cardsPerPage) {
+      groups.push(sponsors.slice(i, i + cardsPerPage));
     }
     return groups;
-  }, []);
+  }, [cardsPerPage]);
 
   const [page, setPage] = useState(0);
   const pausedRef = useRef(false);
+
+  useEffect(() => {
+    setPage(0);
+  }, [cardsPerPage]);
 
   useEffect(() => {
     if (pages.length <= 1) return;
@@ -81,7 +106,7 @@ export default function App() {
                   <SponsorCard
                     key={`${sponsor.name}-${sponsor.logo}`}
                     sponsor={sponsor}
-                    index={pageIndex * CARDS_PER_PAGE + i}
+                    index={pageIndex * cardsPerPage + i}
                     onHoverChange={(hovering) => {
                       pausedRef.current = hovering;
                     }}
