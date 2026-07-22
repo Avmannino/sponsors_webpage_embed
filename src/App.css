@@ -10,7 +10,7 @@
   text-rendering: optimizeLegibility;
 
   --wings-red: #da0035;
-  --page-max-width: 1520px;
+  --page-max-width: 2200px;
   --card-radius: clamp(6px, 1.6vw, 16px);
 }
 
