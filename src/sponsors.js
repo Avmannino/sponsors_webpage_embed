@@ -5,7 +5,7 @@ export const sponsors = [
         website: "https://www.kentshillsportscamp.com/",
         color: "#9f2532",
         logoSize: "100%",
-        logoOffsetY: "-10.64%",
+        logoOffsetY: "-5.64%",
     },
     {
         name: "Stamford Auto Group",
@@ -35,6 +35,8 @@ export const sponsors = [
         name: "MAXX Properties",
         logo: "Picture5.png",
         website: "https://www.maxxproperties.com/",
+        logoOffsetY: "2.03%",
+        cardPadding: "10px"
     },
     {
         name: "Kelly Feda and Lorin Pratley - Coldwell Banker Realty",
@@ -68,7 +70,7 @@ export const sponsors = [
         logo: "Picture9.png",
         website: "https://fultonlandscapedesign.com/",
         logoSize: "95%",
-        logoOffsetY: "-21.72%",
+        logoOffsetY: "-16.72%",
     },
     {
         name: "Sound & Vision Destination",
@@ -83,7 +85,7 @@ export const sponsors = [
         logo: "Picture11.svg",
         website: "https://www.santaguidasanitation.com/",
         logoSize: "95%",
-        logoOffsetY: "-23.09%",
+        logoOffsetY: "-19.09%",
     },
     {
         name: "SLS Construction",
@@ -155,7 +157,7 @@ export const sponsors = [
         logo: "Picture22.png",
         website: "https://www.bermudairholidays.com/en/",
         color: "#1d7872",
-        logoOffsetY: "-12.77%",
+        logoOffsetY: "-8.77%",
     },
     {
         name: "Shoulder Check",
@@ -191,14 +193,14 @@ export const sponsors = [
         logo: "Picture27.png",
         website: "https://www.matterhornfit.com/",
         cardPadding: "15px",
-        logoOffsetY: "4.29%",
+        logoOffsetY: "6.29%",
     },
     {
         name: "GM Hockey",
         logo: "Picture28.png",
         website: "https://www.instagram.com/hockeycoachru10/",
         logoSize: "76%",
-        logoOffsetY: "-28.42%",
+        logoOffsetY: "-26.72%",
     },
     {
         name: "Blockboard",
@@ -211,7 +213,7 @@ export const sponsors = [
         logo: "Picture30.png",
         website: "https://www.langnerllc.com/",
         logoSize: "75%",
-        logoOffsetY: "-25.85%",
+        logoOffsetY: "-23.85%",
     },
     {
         name: "Carnegie Prep",
@@ -233,6 +235,7 @@ export const sponsors = [
         logo: "Picture33.png",
         website: "https://gearupwithus.com/",
         logoSize: "82%",
+        logoOffsetY: "1.03%"
     },
     {
         name: "Rogers McCagg Architects, Planners and Interior Designers",
@@ -240,7 +243,7 @@ export const sponsors = [
         website: "https://rm-arch.com/",
         logoSize: "64%",
         logoAlign: "start",
-        logoOffsetY: "-10%",
+        logoOffsetY: "-7%",
     },
     {
         name: "Athletic Brewing Company",
@@ -248,20 +251,20 @@ export const sponsors = [
         website: "https://athleticbrewing.com/",
         logoSize: "85%",
         logoAlign: "start",
-        logoOffsetY: "-15%",
+        logoOffsetY: "-12%",
     },
     {
         name: "BonJo Coffee Roasters",
         logo: "Picture36.png",
         website: "https://bonjocoffeeroasters.bigcartel.com/",
         cardPadding: "0px",
-        logoOffsetY: "-1.71%",
+        logoOffsetY: "1.71%",
     },
     {
         name: "New Country Motor Car Group",
         logo: "Picture37.png",
         website: "https://www.newcountry.com/",
         logoSize: "95%",
-        logoOffsetY: "-18.64%",
+        logoOffsetY: "-14.64%",
     },
 ];
