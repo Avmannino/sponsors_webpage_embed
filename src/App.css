@@ -53,8 +53,8 @@ img {
 }
 
 .sponsors-header {
-  width: min(100%, 770px);
-  margin: 0 auto clamp(14px, 4.5vw, 58px);
+  width: 100%;
+  margin: 0 auto clamp(24px, 4.5vw, 68px);
   text-align: center;
 }
 
@@ -67,6 +67,8 @@ img {
   letter-spacing: -0.01em;
   line-height: 1.05;
   color: white;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  white-space: nowrap;
 }
 
 .sponsors-carousel {
@@ -97,6 +99,13 @@ img {
 
   .sponsors-header h1 {
     font-size: clamp(1.2rem, 5.5vw, 1.9rem);
+    white-space: normal;
+  }
+}
+
+@media (min-width: 1920px) {
+  .sponsors-header h1 {
+    font-size: 3.4rem;
   }
 }
 
@@ -163,7 +172,7 @@ img {
     0 32px 64px rgb(15 23 42 / 23%),
     0 0 0 4px rgb(218 0 53 / 10%);
 
-  transform: translateY(-8px) scale(1.03);
+  transform: translateY(-20px) scale(1.03);
 }
 
 .sponsor-card:hover::before,
@@ -195,7 +204,7 @@ img {
 
 .sponsor-card:hover .sponsor-logo,
 .sponsor-card:focus-visible .sponsor-logo {
-  transform: scale(1.12);
+  transform: scale(1.05);
 }
 
 .sponsor-name {
