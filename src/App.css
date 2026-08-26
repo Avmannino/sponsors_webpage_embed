@@ -420,17 +420,9 @@ img {
         minmax(0, 1fr)
       );
 
-    gap:
-      10px;
+    gap: 10px;
   }
 
-  /*
-    Slightly taller mobile cards.
-
-    This gives logos more vertical room
-    instead of squeezing them into the
-    desktop 2.7:1 aspect ratio.
-  */
   .sponsor-card {
     aspect-ratio:
       2.35 / 1;
@@ -440,19 +432,13 @@ img {
   }
 
   /*
-    MOBILE LOGO RESET
+    MOBILE DEFAULT
 
-    Desktop sponsor-specific offsets
-    can make logos sit too high once the
-    cards become much smaller.
-
-    On mobile, center every logo inside
-    its card and give it a small size
-    boost.
+    Center all sponsor logos and
+    remove desktop-specific offsets.
   */
   .sponsor-logo {
     top: 0;
-
     align-self: center;
 
     width:
@@ -482,6 +468,29 @@ img {
 
     object-position:
       center center;
+  }
+
+  /*
+    ATHLETIC BREWING
+
+    Its artwork has more visual weight
+    toward the bottom, so move it
+    slightly higher on mobile only.
+  */
+  .sponsor-card[aria-label*="Athletic Brewing" i]
+  .sponsor-logo {
+    top: -8%;
+  }
+
+  /*
+    MCCAGG
+
+    Also needs a smaller upward
+    correction on mobile only.
+  */
+  .sponsor-card[aria-label*="McCagg" i]
+  .sponsor-logo {
+    top: -7%;
   }
 
   .sponsor-card:hover
