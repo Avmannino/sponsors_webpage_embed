@@ -486,8 +486,8 @@ img {
   .sponsor-card[aria-label*="McCagg" i]
   .sponsor-logo {
     top: calc(-7% - 8px);
-    width: 72%;
-    height: 72%;
+    width: 77%;
+    height: 77%;
     max-width: 80%;
     max-height: 80%;
   }
