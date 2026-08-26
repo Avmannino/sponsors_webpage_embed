@@ -70,6 +70,10 @@ img {
   max-width: 100%;
 }
 
+/* =========================================================
+   PAGE
+   ========================================================= */
+
 .sponsors-page {
   width: min(100%, var(--page-max-width));
   min-width: 0;
@@ -83,6 +87,10 @@ img {
     clamp(8px, 4vw, 56px)
     clamp(18px, 2.5vw, 36px);
 }
+
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 .sponsors-header {
   width: 100%;
@@ -124,6 +132,10 @@ img {
   white-space: nowrap;
 }
 
+/* =========================================================
+   SPONSOR GRID
+   ========================================================= */
+
 .sponsors-grid {
   display: grid;
 
@@ -143,32 +155,9 @@ img {
   align-items: stretch;
 }
 
-@media (max-width: 700px) {
-  .sponsors-grid {
-    grid-template-columns:
-      repeat(
-        2,
-        minmax(0, 1fr)
-      );
-  }
-
-  .sponsors-header h1 {
-    font-size:
-      clamp(
-        1.2rem,
-        5.5vw,
-        1.9rem
-      );
-
-    white-space: normal;
-  }
-}
-
-@media (min-width: 1920px) {
-  .sponsors-header h1 {
-    font-size: 3.4rem;
-  }
-}
+/* =========================================================
+   SPONSOR CARD
+   ========================================================= */
 
 .sponsor-card {
   position: relative;
@@ -316,6 +305,10 @@ img {
   outline-offset: 4px;
 }
 
+/* =========================================================
+   SPONSOR LOGO
+   ========================================================= */
+
 .sponsor-logo {
   position: relative;
 
@@ -365,6 +358,10 @@ img {
     scale(1.05);
 }
 
+/* =========================================================
+   ACCESSIBLE SPONSOR NAME
+   ========================================================= */
+
 .sponsor-name {
   position: absolute;
 
@@ -389,6 +386,127 @@ img {
   border: 0;
 }
 
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .sponsors-page {
+    padding:
+      28px
+      10px
+      22px;
+  }
+
+  .sponsors-header {
+    margin-bottom: 24px;
+  }
+
+  .sponsors-header h1 {
+    font-size:
+      clamp(
+        1.2rem,
+        5.5vw,
+        1.9rem
+      );
+
+    white-space: normal;
+  }
+
+  .sponsors-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    gap:
+      10px;
+  }
+
+  /*
+    Slightly taller mobile cards.
+
+    This gives logos more vertical room
+    instead of squeezing them into the
+    desktop 2.7:1 aspect ratio.
+  */
+  .sponsor-card {
+    aspect-ratio:
+      2.35 / 1;
+
+    padding:
+      5px 7px;
+  }
+
+  /*
+    MOBILE LOGO RESET
+
+    Desktop sponsor-specific offsets
+    can make logos sit too high once the
+    cards become much smaller.
+
+    On mobile, center every logo inside
+    its card and give it a small size
+    boost.
+  */
+  .sponsor-logo {
+    top: 0;
+
+    align-self: center;
+
+    width:
+      min(
+        calc(
+          var(
+            --logo-size,
+            100%
+          ) + 10%
+        ),
+        110%
+      );
+
+    height:
+      min(
+        calc(
+          var(
+            --logo-size,
+            100%
+          ) + 10%
+        ),
+        110%
+      );
+
+    max-width: 110%;
+    max-height: 110%;
+
+    object-position:
+      center center;
+  }
+
+  .sponsor-card:hover
+  .sponsor-logo,
+  .sponsor-card:focus-visible
+  .sponsor-logo {
+    transform:
+      scale(1.03);
+  }
+}
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1920px) {
+  .sponsors-header h1 {
+    font-size: 3.4rem;
+  }
+}
+
+/* =========================================================
+   ENTRANCE ANIMATION
+   ========================================================= */
+
 @keyframes card-in {
   from {
     opacity: 0;
@@ -405,12 +523,20 @@ img {
   }
 }
 
+/* =========================================================
+   TOUCH
+   ========================================================= */
+
 @media (hover: none) {
   .sponsor-card:active {
     transform:
       scale(0.985);
   }
 }
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
   *,
