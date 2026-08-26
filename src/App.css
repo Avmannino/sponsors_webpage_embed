@@ -485,9 +485,9 @@ img {
   /* McCagg mobile position + sizing */
   .sponsor-card[aria-label*="McCagg" i]
   .sponsor-logo {
-    top: calc(-7% - 16px);
-    width: 83%;
-    height: 83%;
+    top: calc(-7% - 20px);
+    width: 85%;
+    height: 85%;
     max-width: 85%;
     max-height: 85%;
   }
