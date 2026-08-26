@@ -139,6 +139,9 @@ img {
 .sponsors-grid {
   display: grid;
 
+  width: min(100%, 1200px);
+  margin: 0 auto;
+
   grid-template-columns:
     repeat(
       3,
