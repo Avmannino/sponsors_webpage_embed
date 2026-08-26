@@ -473,7 +473,7 @@ img {
   /* McCagg mobile position */
   .sponsor-card[aria-label*="McCagg" i]
   .sponsor-logo {
-    top: calc(-7% - 8px);
+    top: calc(-7% - 12px);
   }
 
   .sponsor-card:hover
