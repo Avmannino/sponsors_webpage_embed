@@ -431,12 +431,6 @@ img {
       5px 7px;
   }
 
-  /*
-    MOBILE DEFAULT
-
-    Center all sponsor logos and
-    remove desktop-specific offsets.
-  */
   .sponsor-logo {
     top: 0;
     align-self: center;
@@ -470,27 +464,16 @@ img {
       center center;
   }
 
-  /*
-    ATHLETIC BREWING
-
-    Its artwork has more visual weight
-    toward the bottom, so move it
-    slightly higher on mobile only.
-  */
+  /* Athletic Brewing mobile position */
   .sponsor-card[aria-label*="Athletic Brewing" i]
   .sponsor-logo {
     top: -8%;
   }
 
-  /*
-    MCCAGG
-
-    Also needs a smaller upward
-    correction on mobile only.
-  */
+  /* McCagg mobile position */
   .sponsor-card[aria-label*="McCagg" i]
   .sponsor-logo {
-    top: -7%;
+    top: calc(-7% - 8px);
   }
 
   .sponsor-card:hover
